@@ -125,9 +125,12 @@ while x <= 100:
 
 # [P58]
 # $python
-while 1 == 1:
+#while 1 == 1:
+i = 0
+while i <= 3:
     name = input("Ingrese su nombre: ")
     print("Hola, {}!".format(name))
+    i += 1
 
 # [P59]
 # $python
@@ -236,7 +239,7 @@ lista.count(6)
 a = (1, 2, 3)  # Se Añaden elementos a la Tupla.
 print("Elementos de la Tupla: %s" % str(a))  # Se imprimen los elementos
 
-a[1] = 9  # Error
+# a[1] = 9  # Error
 
 # [P81]
 # $python
@@ -267,12 +270,17 @@ print("Resumen: %d datos, media %g. " % (n, m))
 
 # [P86]
 # Abriendo Archivo
-archivo = open("C:\\archivo.txt", "r")
+#archivo = open("C:\\archivo.txt", "r")
+archivo = open("slides/archivo.txt", "r")
 contenido = archivo.read()
 print("el contenido del archivo es:\n %s" % str(contenido))
 
 # [P92]
-while True print("Hola Mundo")
+#while True:
+i = 0
+while i < 3:
+    print("Hola Mundo")
+    i += 1
 
 # [P93]
 # $python
@@ -281,8 +289,10 @@ while True print("Hola Mundo")
 # '2'+2
 
 # [P94]
-while True:
-
+#while True:
+i = 0
+while i < 3:
+    i += 1
     try:
         x = int(input(u"Por favor ingrese un número: "))
         break
@@ -309,15 +319,17 @@ except MiError as e:
 # [P97]
 try:
     raise KeyboardInterrupt
+except KeyboardInterrupt as kb:
+    print("KeyboardInterrupt Lanzada")
 finally:
     print("Chau, mundo")
 
 # [P98]
-with open("C:\\archivo.txt") as f:
+with open("slides/archivo.txt") as f:
     for línea in f:
         print(línea)
 
-f = open("archivo.txt")
+f = open("slides/archivo.txt")
 try:
 
     print(f.readlines())
@@ -359,11 +371,22 @@ class Prueba:
 # [P106]
 
 
-class ClaseDerivada(ClaseBase):
+# class ClaseDerivada(ClaseBase):
 #    <declaración-1 >
 #    .
 #    .
 #    .
 #    <declaración-N >
 
+# [P107]
+
+# class ClaseDerivada(Base1, Base2, Base3):
+#   <declaración-1>
+#   .
+#   .
+#   .
+#   <declaración-N>
+
+# [P112]
+#mysql_slides.py
 
